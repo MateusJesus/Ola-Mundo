@@ -1,22 +1,21 @@
-import './Banner.css'
-import minhaFoto from 'assets/minha_foto.png'
+import styles from './Banner.module.css'
 import circuloColorido from 'assets/circulo_colorido.png'
 
 const Banner = () => {
     return (
-        <div className='banner'>
-            <div className='apresentacao'>
-                <h1 className='titulo'>Olá, Mundo!</h1>
-                <p className='paragrafo'>Boas vindas ao meu espaço pessoal! Eu sou Mateus de Jesus, aluno da escola de Front-end da Alura. Aqui compartilho meus conhecimentos de react :)</p>
+        <div className={styles.banner}>
+            <div className={styles.apresentacao}>
+                <h1 className={styles.titulo}>Olá, Mundo!</h1>
+                <p className={styles.paragrafo}>Boas vindas ao meu espaço pessoal! Eu sou Mateus de Jesus, aluno da escola de Front-end da Alura. Aqui compartilho meus conhecimentos de ReactJS :)</p>
             </div>
-            <div className='imagens'>
+            <div className={styles.imagens}>
                 <img 
-                    className='circuloColorido'
+                    className={styles.circuloColorido}
                     src={circuloColorido}
                     aria-hidden={true}
                 />
                 <img 
-                    className='minhaFoto'
+                    className={styles.minhaFoto}
                     src='https://github.com/MateusJesus.png'
                     alt='Foto de Mateus'
                 />

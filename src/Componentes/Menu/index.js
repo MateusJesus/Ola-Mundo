@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
-import "./Menu.css"
+import styles from "./Menu.module.css"
 import MenuLink from "../MenuLink"
 
 const Menu = () => {
     return (
         <header>
-            <nav className="navegacao">
+            <nav className={styles.navegacao}>
                 <MenuLink to='/'>
                     Pagina inicial
                 </MenuLink>

@@ -8,6 +8,7 @@
  
 .titulo {
     font-family: var(--fonte-secundaria);
+    color: var(--branco);
     font-size: 4rem;
     margin-top: 4.875rem;
     margin-bottom: 2rem;
