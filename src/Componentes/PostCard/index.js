@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
 import styles from './Post.module.css'
 
-const Post = ({post}) => {
+const PostCard = ({post}) => {
     return(
+        <Link to={`/post/${post.id}`}>
         <div className={styles.post}>
             <img
                 className={styles.capa}
@@ -14,7 +16,9 @@ const Post = ({post}) => {
                 ler
             </button>
         </div>
+        
+        </Link>
     )
 }
 
-export default Post 
+export default PostCard 

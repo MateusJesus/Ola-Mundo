@@ -1,19 +1,20 @@
-import Banner from 'Componentes/Banner'
-import Post from 'Componentes/Post'
+import PostCard from 'Componentes/PostCard'
 import Posts from 'json/posts.json'
 import './Inicio.css'
+import { Link } from 'react-router-dom'
 
 const Inicio = () => {
     return (
-            <ul className='posts'>
-                {Posts.map((post) => {
-                    return (
-                        <li key={post.id}>
-                            <Post post={post} />
-                        </li>
-                    )
-                })}
-            </ul>
+        <ul className='posts'>
+            {Posts.map((post) => {
+                return (
+                    <li key={post.id}>
+                        <PostCard post={post} />
+                    </li>
+                )
+            })}
+        </ul>
+
     )
 }
 
