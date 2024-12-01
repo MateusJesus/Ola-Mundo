@@ -1,7 +1,10 @@
+import BotaoPrincipal from 'Componentes/BotaoPrincipal'
 import styles from './NaoEncontrada.module.css'
 import imagemCachorro from 'assets/erro_404.png'
+import { useNavigate } from 'react-router-dom'
 
 const NaoEncontrada = () => {
+    const navegar = useNavigate()
     return (
         <>
             <div className={styles.conteudoContainer}>
@@ -13,8 +16,10 @@ const NaoEncontrada = () => {
                 <p className={styles.paragrafo}>
                     Aguarde uns instantes e recarregue a página, ou volte para a página inicial.
                 </p>
-                <div className={styles.botaoContainer}>
-                    <button>Voltar</button>
+                <div onClick={()=>navegar(-1)} className={styles.botaoContainer}>
+                    <BotaoPrincipal lg="lg">
+                        Voltar
+                    </BotaoPrincipal>
                 </div>
                 <img
                     className={styles.imagemCachorro}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './Post.module.css'
+import BotaoPrincipal from 'Componentes/BotaoPrincipal'
 
 const PostCard = ({post}) => {
     return(
@@ -7,14 +8,14 @@ const PostCard = ({post}) => {
         <div className={styles.post}>
             <img
                 className={styles.capa}
-                src={`assets/posts/${post.id}/capa.png`}
+                src={`/assets/posts/${post.id}/capa.png`}
             />
             <h1 className={styles.titulo}>
                 {post.titulo}
             </h1>
-            <button className={styles.botaoLer}>
+            <BotaoPrincipal>
                 ler
-            </button>
+            </BotaoPrincipal>
         </div>
         
         </Link>
